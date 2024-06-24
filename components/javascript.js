@@ -109,31 +109,37 @@ class LinkedList {
       this.updateDisplay();
   }
 
+  
   insertAtPosition(value, position) {
-      if (position < 0 || position > this.size) {
-          this.showMessage("Posição inválida.");
-          return;
-      }
-      const newNode = new Node(value);
-      if (position === 0) {
-          newNode.next = this.head;
-          this.head = newNode;
-      } else {
-          let current = this.head;
-          let previous = null;
-          let index = 0;
-          while (index < position) {
-              previous = current;
-              current = current.next;
-              index++;
-          }
-          newNode.next = current;
-          previous.next = newNode;
-      }
-      this.size++;
-      this.updateDisplay();
-  }
+    if (position < 0 || position > this.size) {
+        console.error("Posição inválida.");
+        return;
+    }
 
+    const newNode = new Node(value);
+    
+    if (position === 0) {
+        newNode.next = this.head;
+        this.head = newNode;
+    } else {
+        let current = this.head;
+        let index = 0;
+        while (index < position - 1) {
+            current = current.next;
+            index++;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+    }
+    
+    this.size++;
+    this.updateDisplay();
+}
+
+  
+  
+  
+  
   removeFromBeginning() {
       if (!this.head) {
           this.showMessage("A lista está vazia.");
