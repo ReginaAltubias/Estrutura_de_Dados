@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de dados</title>
+    <link rel="stylesheet" href="./components/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./components/bootstrap/icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./components/style.css">
+    
+</head>
+<body>
+
+  <div class="container-fluid pt-2 pb-4">
+    <div class="row">
+
+      <div class="col-4">
+        <main>
+          <div class="sidebar">
+            <ul>
+              <span>Selecione uma opção</span>
+              <li class="my-3"><a href="#" onclick="pilha()">Pilha</a></li>
+              <li class="my-3"><a href="#" onclick="lista()">Lista Encadeada</a></li>
+              <li class="my-3"><a href="#"onclick="arvore()">Árvore</a></li>
+            </ul>
+          </div>
+        </main>
+      </div>
+
+      <div class="col">
+        <div id="pilha">
+          <header><h1>Pilha</h1></header>
+          <div class="input">
+            <label for="no">Digite um nó:</label>
+              <input type="number" class="form-control" id="input" name="no" placeholder="Insira um valor"/>
+          </div>
+         
+         <div class="button">
+            <button class="btn" onclick="push()">Inserir</button>
+            <button class="btn" onclick="pop()">Eliminar</button>
+            <button class="btn" onclick="peek()">Topo da Pilha</button>
+            <button class="btn" onclick="is_empty()">Verificar Pilha</button>
+         </div>
+        <div id="stack">
+        </div>
+          <p>Top: <span id="top"></span></p>
+        </div>
+
+        <div id="lista">
+          <header><h1>Lista Ligadas</h1></header>
+          <div class="input-section">
+              <label for="no">Digite um nó:</label>
+              <input type="text" id="valueInput" class="form-control" placeholder="Insira um valor">
+              <label for="no">Digite a posi:</label>
+              <input type="number" id="positionInput" class="form-control" placeholder="Posição" min="0">
+          </div>
+          <div class="button">
+            <button class="btn" onclick="insertAtBeginning()">Inserir no Fim</button>
+            <button class="btn" onclick="insertAtEnd()">Inserir no Início</button>
+            <button class="btn" onclick="insertAtPosition()">Inserir na Posição</button>
+            <button class="btn" onclick="removeFromBeginning()">Remover do Início</button>
+            <button class="btn" onclick="removeFromEnd()">Remover do Fim</button>
+            <button class="btn" onclick="removeFromPosition()">Remover da Posição</button>
+            <button class="btn" onclick="searchValue()">Buscar</button>
+          </div>
+          <div class="list-section">
+              <h4 style="color: #999;" class="my-5">Lista Atual:</h4>
+              <div id="linkedList" class="linked-list"></div>
+              <div id="count" class="mt-5" style="color: #999;">Número de Elementos: 0</div>
+          </div>
+          <div id="message" class="message"></div>
+
+        <div id="arvore">
+          <header><h1>Árvore</h1></header>
+
+          <div class="input">
+            <label for="no">Digite um nó:</label>
+            <input type="number" class="form-control" id="nodeValue" placeholder="" name="no">
+          </div>
+        </div>
+      </div>
+        
+    </div>
+    </div>
+  </div>
+  <script src="./components/bootstrap/js/bootstrap.min.js"></script>
+  <script src="./components/javascript.js"></script>
+</body>
+</html>
