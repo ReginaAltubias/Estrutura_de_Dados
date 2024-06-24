@@ -49,6 +49,10 @@ body{
 
 }*/
 
+h1{
+    color: #999;
+}
+
 .col-8 {
     display: flex;
     justify-content: center;
@@ -351,13 +355,14 @@ main {
         padding: 0px;
         z-index: var(--i);
         transition: 0.5s;
-       
+        color: #999;
         text-align: center;
         margin-right: 10px;
     }
     .linked-list .block :hover{
         background: #33a3ee;
         transform: translateX(-50px);
+        color: #2e3133;
     }
     
     .linked-list .block :hover::before{
@@ -397,6 +402,7 @@ main {
     .linked-list .block:hover{
         background: #33a3ee;
         transform: translateX(-10px);
+        color: #2e3133;
     }
     
     .linked-list .block:hover::before{
@@ -423,26 +429,3 @@ main {
 
 
 
-@keyframes fillCircleLeft {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fillLine {
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes fillTriangle {
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fillCircleRight {
-    to {
-        opacity: 1;
-    }
-}
