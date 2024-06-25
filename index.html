@@ -70,17 +70,34 @@
           </div>
           <div id="message" class="message"></div>
 
+        
+        
+        </div>
+
         <div id="arvore">
           <header><h1>Árvore</h1></header>
 
-          <div class="input">
+          <div class="input col-12 pb-5">
             <label for="no">Digite um nó:</label>
-            <input type="number" class="form-control" id="nodeValue" placeholder="" name="no">
+            <input type="number" class="form-control" id="entradaArvore" placeholder="Adicionar nó">
+            <input type="number" class="form-control" id="removerArvore" placeholder="Remover nó">
+           
+            
+          </div>
+
+          <div class="button ">
+            <button class="btn" onclick="adicionarNoArvore()">Adicionar</button>
+            <button class="btn" onclick="removerNoArvore()">Remover</button>
+            <button class="btn" onclick="mostrarPreOrdem()">Pré-ordem</button>
+            <button class="btn" onclick="mostrarEmOrdem()">Em-ordem</button>
+            <button class="btn" onclick="mostrarPosOrdem()">Pós-ordem</button>
+          </div>
+          
+          <div class="container">
+            <div id="arvoreBinaria" class="arvore"></div>
+            <div id="resultadoArvore" style="color: #999; font-size: 20px;    text-align: left;"></div>
           </div>
         </div>
-      </div>
-        
-    </div>
     </div>
   </div>
   <script src="./components/bootstrap/js/bootstrap.min.js"></script>
